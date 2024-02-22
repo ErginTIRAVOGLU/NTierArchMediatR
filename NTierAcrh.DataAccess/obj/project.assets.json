@@ -4322,11 +4322,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\Backend\\NTierAcrh\\NTierAcrh.DataAccess\\NTierAcrh.DataAccess.csproj",
+      "projectUniqueName": "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.DataAccess\\NTierAcrh.DataAccess.csproj",
       "projectName": "NTierAcrh.DataAccess",
-      "projectPath": "D:\\Projects\\Backend\\NTierAcrh\\NTierAcrh.DataAccess\\NTierAcrh.DataAccess.csproj",
+      "projectPath": "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.DataAccess\\NTierAcrh.DataAccess.csproj",
       "packagesPath": "C:\\Users\\root\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\Backend\\NTierAcrh\\NTierAcrh.DataAccess\\obj\\",
+      "outputPath": "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\root\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4343,8 +4343,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Projects\\Backend\\NTierAcrh\\NTierAcrh.Entities\\NTierAcrh.Entities.csproj": {
-              "projectPath": "D:\\Projects\\Backend\\NTierAcrh\\NTierAcrh.Entities\\NTierAcrh.Entities.csproj"
+            "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.Entities\\NTierAcrh.Entities.csproj": {
+              "projectPath": "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.Entities\\NTierAcrh.Entities.csproj"
             }
           }
         }

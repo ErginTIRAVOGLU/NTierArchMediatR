@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Backend\\NTierAcrh\\NTierAcrh.Entities\\NTierAcrh.Entities.csproj": {}
+    "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.Entities\\NTierAcrh.Entities.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Backend\\NTierAcrh\\NTierAcrh.Entities\\NTierAcrh.Entities.csproj": {
+    "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.Entities\\NTierAcrh.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Backend\\NTierAcrh\\NTierAcrh.Entities\\NTierAcrh.Entities.csproj",
+        "projectUniqueName": "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.Entities\\NTierAcrh.Entities.csproj",
         "projectName": "NTierAcrh.Entities",
-        "projectPath": "D:\\Projects\\Backend\\NTierAcrh\\NTierAcrh.Entities\\NTierAcrh.Entities.csproj",
+        "projectPath": "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.Entities\\NTierAcrh.Entities.csproj",
         "packagesPath": "C:\\Users\\root\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Backend\\NTierAcrh\\NTierAcrh.Entities\\obj\\",
+        "outputPath": "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\root\\AppData\\Roaming\\NuGet\\NuGet.Config",

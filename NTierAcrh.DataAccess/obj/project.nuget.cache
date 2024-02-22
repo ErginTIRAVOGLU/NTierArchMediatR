@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kS80uodbLwgfBl2uxLo+bdAwZPgfVX9DZi7LMrWF0WJ2N7uMZXWl/RrMjuwIuQL0JqSb7kmGKM+g8cD/Y5ai+g==",
+  "dgSpecHash": "JCup0M/Vbe2K0n05WB7BJ09iJgwUHYIepT6Vsc53+5j2IDLkxL+cuCebothOj4Abl4IY9sYCRBGDMAPKbvDNjA==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\Backend\\NTierAcrh\\NTierAcrh.DataAccess\\NTierAcrh.DataAccess.csproj",
+  "projectFilePath": "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.DataAccess\\NTierAcrh.DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\root\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\root\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

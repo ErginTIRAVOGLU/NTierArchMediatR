@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "K2OlrQhQD0dvhnwAv6hN5FkDHIFW8Fq4FwCEfzQZz+5Cby4qDnMlOI2urM13nA3sVniDpcxRRLxvJF1mmVHPEg==",
+  "dgSpecHash": "GDlRt0A+zbCqrJ4H/M5ET0YOjKu+hELXPoJk44ZYepDsSqPZeIr4xN3rtADwPubHVQdgMNirQGknHpuwxPYX4g==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\Backend\\NTierAcrh\\NTierAcrh.WebAPI\\NTierAcrh.WebAPI.csproj",
+  "projectFilePath": "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.WebAPI\\NTierAcrh.WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\root\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\root\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\root\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
     "C:\\Users\\root\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\root\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
     "C:\\Users\\root\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

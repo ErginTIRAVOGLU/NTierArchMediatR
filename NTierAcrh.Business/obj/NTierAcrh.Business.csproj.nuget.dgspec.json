@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Backend\\NTierAcrh\\NTierAcrh.Business\\NTierAcrh.Business.csproj": {}
+    "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.Business\\NTierAcrh.Business.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Backend\\NTierAcrh\\NTierAcrh.Business\\NTierAcrh.Business.csproj": {
+    "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.Business\\NTierAcrh.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Backend\\NTierAcrh\\NTierAcrh.Business\\NTierAcrh.Business.csproj",
+        "projectUniqueName": "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.Business\\NTierAcrh.Business.csproj",
         "projectName": "NTierAcrh.Business",
-        "projectPath": "D:\\Projects\\Backend\\NTierAcrh\\NTierAcrh.Business\\NTierAcrh.Business.csproj",
+        "projectPath": "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.Business\\NTierAcrh.Business.csproj",
         "packagesPath": "C:\\Users\\root\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Backend\\NTierAcrh\\NTierAcrh.Business\\obj\\",
+        "outputPath": "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\root\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Projects\\Backend\\NTierAcrh\\NTierAcrh.Entities\\NTierAcrh.Entities.csproj": {
-                "projectPath": "D:\\Projects\\Backend\\NTierAcrh\\NTierAcrh.Entities\\NTierAcrh.Entities.csproj"
+              "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.Entities\\NTierAcrh.Entities.csproj": {
+                "projectPath": "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.Entities\\NTierAcrh.Entities.csproj"
               }
             }
           }
@@ -49,6 +49,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.9.0, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[12.2.0, )"
@@ -74,14 +78,14 @@
         }
       }
     },
-    "D:\\Projects\\Backend\\NTierAcrh\\NTierAcrh.Entities\\NTierAcrh.Entities.csproj": {
+    "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.Entities\\NTierAcrh.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Backend\\NTierAcrh\\NTierAcrh.Entities\\NTierAcrh.Entities.csproj",
+        "projectUniqueName": "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.Entities\\NTierAcrh.Entities.csproj",
         "projectName": "NTierAcrh.Entities",
-        "projectPath": "D:\\Projects\\Backend\\NTierAcrh\\NTierAcrh.Entities\\NTierAcrh.Entities.csproj",
+        "projectPath": "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.Entities\\NTierAcrh.Entities.csproj",
         "packagesPath": "C:\\Users\\root\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Backend\\NTierAcrh\\NTierAcrh.Entities\\obj\\",
+        "outputPath": "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\root\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SoI/MTBk3StVlZEM9lTLDWPwyK4LPy9azskUOsAIX/WlauIMY0zUaloEWmSGwg5+ikHiXeRwlbX7Q2JzK/JAUg==",
+  "dgSpecHash": "zRo4B+KIRu7jGxQ+YWCtFPcOQpsP3PPbnfnV3RdiHN18wNb541tWLoiQqzQ3eAauDxv5B41Bv9Env2ZDzqFXpw==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\Backend\\NTierAcrh\\NTierAcrh.Entities\\NTierAcrh.Entities.csproj",
+  "projectFilePath": "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.Entities\\NTierAcrh.Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\root\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.2\\microsoft.aspnetcore.cryptography.internal.8.0.2.nupkg.sha512",
     "C:\\Users\\root\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.2\\microsoft.aspnetcore.cryptography.keyderivation.8.0.2.nupkg.sha512",
