@@ -27,6 +27,8 @@ internal sealed class UpdateCategoryCommandHandler : IRequestHandler<UpdateCateg
             throw new ArgumentException("Bu kategori daha önce oluşturulmuş!");
         }
 
+        category.UpdatedById = request.userId;
+        category.UpdatedDate = DateTime.Now;
         category.Name = request.Name;
         await _unitOfWork.SaveChangesAsync(cancellationToken);
     }

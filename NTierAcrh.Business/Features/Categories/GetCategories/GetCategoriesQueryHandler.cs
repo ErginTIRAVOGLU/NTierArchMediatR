@@ -15,6 +15,6 @@ internal sealed class GetCategoriesQueryHandler : IRequestHandler<GetCategoriesQ
 
     public async Task<List<Category>> Handle(GetCategoriesQuery request, CancellationToken cancellationToken)
     {
-        return await _categoryRepository.GetAll().OrderBy(c => c.Name).ToListAsync();
+        return await _categoryRepository.GetAll().Where(c => c.IsHidden == false && c.IsDeleted == false).OrderBy(c => c.Name).ToListAsync();
     }
 }

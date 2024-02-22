@@ -24,6 +24,7 @@ internal sealed class CreateCategoryCommandHandler : IRequestHandler<CreateCateg
 
         Category category = new()
         {
+            CreatedById = request.userId,
             Name = request.Name,
         };
         await _categoryRepository.AddAsync(category);

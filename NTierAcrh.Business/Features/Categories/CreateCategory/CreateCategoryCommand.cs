@@ -2,4 +2,7 @@
 
 namespace NTierAcrh.Business.Features.Categories.CreateCategory;
 public sealed record CreateCategoryCommand(
-    string Name) : IRequest;
+    Guid userId,
+    string Name,
+    bool IsMainCategory,
+    Guid? MainCategoryId) : IRequest;

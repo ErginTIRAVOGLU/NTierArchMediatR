@@ -20,8 +20,10 @@ internal sealed class DeleteCategoryCommandHandler : IRequestHandler<DeleteCateg
         {
             throw new ArgumentException("Kategori bulunamadı!");
         }
-
-        _categoryRepository.Remove(category);
+        category.DeletedById = request.userId;
+        category.DeletedDate = DateTime.Now;
+        category.IsDeleted = true;
+        _categoryRepository.Update(category);
         await _unitOfWork.SaveChangesAsync(cancellationToken);
     }
 }
