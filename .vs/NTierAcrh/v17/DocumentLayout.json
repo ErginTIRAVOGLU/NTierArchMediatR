@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Projects\\Backend\\NTierArch\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{FBBBA5EC-E549-4C12-A93D-725BA5537474}|NTierAcrh.Entities\\NTierAcrh.Entities.csproj|d:\\projects\\backend\\ntierarch\\ntieracrh.entities\\abstractions\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBBBA5EC-E549-4C12-A93D-725BA5537474}|NTierAcrh.Entities\\NTierAcrh.Entities.csproj|solutionrelative:ntieracrh.entities\\abstractions\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -55,25 +50,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 148,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Entity.cs",
-              "DocumentMoniker": "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.Entities\\Abstractions\\Entity.cs",
-              "RelativeDocumentMoniker": "NTierAcrh.Entities\\Abstractions\\Entity.cs",
-              "ToolTip": "D:\\Projects\\Backend\\NTierArch\\NTierAcrh.Entities\\Abstractions\\Entity.cs",
-              "RelativeToolTip": "NTierAcrh.Entities\\Abstractions\\Entity.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-22T19:20:16.988Z",
-              "EditorCaption": ""
             }
           ]
         },
