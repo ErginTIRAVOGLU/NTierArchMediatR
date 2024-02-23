@@ -1,0 +1,16 @@
+D:\Projects\Backend\NTierArch\NTierAcrh.Business\bin\Debug\net8.0\NTierAcrh.Business.deps.json
+D:\Projects\Backend\NTierArch\NTierAcrh.Business\bin\Debug\net8.0\NTierAcrh.Business.dll
+D:\Projects\Backend\NTierArch\NTierAcrh.Business\bin\Debug\net8.0\NTierAcrh.Business.pdb
+D:\Projects\Backend\NTierArch\NTierAcrh.Business\bin\Debug\net8.0\NTierAcrh.Entities.dll
+D:\Projects\Backend\NTierArch\NTierAcrh.Business\bin\Debug\net8.0\NTierAcrh.Entities.pdb
+D:\Projects\Backend\NTierArch\NTierAcrh.Business\obj\Debug\net8.0\NTierAcrh.Business.csproj.AssemblyReference.cache
+D:\Projects\Backend\NTierArch\NTierAcrh.Business\obj\Debug\net8.0\NTierAcrh.Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Backend\NTierArch\NTierAcrh.Business\obj\Debug\net8.0\NTierAcrh.Business.AssemblyInfoInputs.cache
+D:\Projects\Backend\NTierArch\NTierAcrh.Business\obj\Debug\net8.0\NTierAcrh.Business.AssemblyInfo.cs
+D:\Projects\Backend\NTierArch\NTierAcrh.Business\obj\Debug\net8.0\NTierAcrh.Business.csproj.CoreCompileInputs.cache
+D:\Projects\Backend\NTierArch\NTierAcrh.Business\obj\Debug\net8.0\NTierAcrh.Business.sourcelink.json
+D:\Projects\Backend\NTierArch\NTierAcrh.Business\obj\Debug\net8.0\NTierAcr.626097F3.Up2Date
+D:\Projects\Backend\NTierArch\NTierAcrh.Business\obj\Debug\net8.0\NTierAcrh.Business.dll
+D:\Projects\Backend\NTierArch\NTierAcrh.Business\obj\Debug\net8.0\refint\NTierAcrh.Business.dll
+D:\Projects\Backend\NTierArch\NTierAcrh.Business\obj\Debug\net8.0\NTierAcrh.Business.pdb
+D:\Projects\Backend\NTierArch\NTierAcrh.Business\obj\Debug\net8.0\ref\NTierAcrh.Business.dll

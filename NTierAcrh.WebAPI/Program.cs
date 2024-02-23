@@ -4,8 +4,8 @@ using NTierAcrh.DataAccess;
 var builder = WebApplication.CreateBuilder(args);
 
 //DependencyInjections
-builder.Services.AddBusiness();
 builder.Services.AddDataAccess(builder.Configuration);
+builder.Services.AddBusiness();
 //DependencyInjections
 
 builder.Services.AddControllers();

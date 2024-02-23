@@ -5,7 +5,7 @@ using NTierAcrh.Entities.Models;
 using NTierAcrh.Entities.Repositories;
 
 namespace NTierAcrh.DataAccess.Context;
-public sealed class AppDbContext : IdentityDbContext<AppUser, AppRole, Guid>, IUnitOfWork
+internal sealed class AppDbContext : IdentityDbContext<AppUser, AppRole, Guid>, IUnitOfWork
 {
     public AppDbContext(DbContextOptions options) : base(options)
     {
@@ -21,6 +21,6 @@ public sealed class AppDbContext : IdentityDbContext<AppUser, AppRole, Guid>, IU
         builder.Ignore<IdentityRoleClaim<Guid>>();
 
         //Reflection sayesinde IEntiyTypeConfiguration implemente edilen tüm dosyaları bulur tanır
-        builder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+        builder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);        
     }
 }

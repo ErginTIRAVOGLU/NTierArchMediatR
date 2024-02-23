@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
 using NTierAcrh.Entities.Models;
 using NTierAcrh.Entities.Repositories;
 
@@ -7,11 +8,13 @@ internal sealed class CreateRoleCommandHandler : IRequestHandler<CreateRoleComma
 {
     private readonly IRoleRepository _roleRepository;
     private readonly IUnitOfWork _unitOfWork;
+    private readonly IMapper _mapper;
 
-    public CreateRoleCommandHandler(IRoleRepository roleRepository, IUnitOfWork unitOfWork)
+    public CreateRoleCommandHandler(IRoleRepository roleRepository, IUnitOfWork unitOfWork, IMapper mapper)
     {
         _roleRepository = roleRepository;
         _unitOfWork = unitOfWork;
+        _mapper = mapper;
     }
 
     public async Task Handle(CreateRoleCommand request, CancellationToken cancellationToken)
@@ -22,7 +25,7 @@ internal sealed class CreateRoleCommandHandler : IRequestHandler<CreateRoleComma
             throw new ArgumentException("Rol daha önce eklenmiş!");
         }
 
-        AppRole role = new() { Name = request.Name };
+        AppRole role = _mapper.Map<AppRole>(request);
 
         await _roleRepository.AddAsync(role);
         await _unitOfWork.SaveChangesAsync(cancellationToken);

@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
 using NTierAcrh.Entities.Repositories;
 
 namespace NTierAcrh.Business.Features.Categories.UpdateCategory;
@@ -7,11 +8,13 @@ internal sealed class UpdateCategoryCommandHandler : IRequestHandler<UpdateCateg
 {
     private readonly ICategoryRepository _categoryRepository;
     private readonly IUnitOfWork _unitOfWork;
+    private readonly IMapper _mapper;
 
-    public UpdateCategoryCommandHandler(ICategoryRepository categoryRepository, IUnitOfWork unitOfWork)
+    public UpdateCategoryCommandHandler(ICategoryRepository categoryRepository, IUnitOfWork unitOfWork, IMapper mapper)
     {
         _categoryRepository = categoryRepository;
         _unitOfWork = unitOfWork;
+        _mapper = mapper;
     }
 
     public async Task Handle(UpdateCategoryCommand request, CancellationToken cancellationToken)
@@ -27,9 +30,10 @@ internal sealed class UpdateCategoryCommandHandler : IRequestHandler<UpdateCateg
             throw new ArgumentException("Bu kategori daha önce oluşturulmuş!");
         }
 
-        category.UpdatedById = request.userId;
         category.UpdatedDate = DateTime.Now;
-        category.Name = request.Name;
+        //Update işleminde mapper kullanımı
+        _mapper.Map(request, category);
+
         await _unitOfWork.SaveChangesAsync(cancellationToken);
     }
 }

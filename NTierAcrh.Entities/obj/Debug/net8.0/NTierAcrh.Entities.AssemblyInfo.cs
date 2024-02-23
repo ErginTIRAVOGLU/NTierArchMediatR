@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NTierAcrh.Entities")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70fb5242e4a8c63ec1b276e261f69b4dcbbbae36")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db069e6e0262dc93339b2e59b8e0d6b8d1ddcf7a")]
 [assembly: System.Reflection.AssemblyProductAttribute("NTierAcrh.Entities")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NTierAcrh.Entities")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

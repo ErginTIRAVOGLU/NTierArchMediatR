@@ -1,11 +1,10 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
-using NTierAcrh.Entities.Models;
 using NTierAcrh.Entities.Repositories;
 
 namespace NTierAcrh.Business.Features.Roles.GetRoles;
 
-internal sealed class GetRolesQueryHandler : IRequestHandler<GetRolesQuery, List<AppRole>>
+internal sealed class GetRolesQueryHandler : IRequestHandler<GetRolesQuery, List<GetRolesQueryResponse>>
 {
     private readonly IRoleRepository _roleRepository;
 
@@ -14,8 +13,13 @@ internal sealed class GetRolesQueryHandler : IRequestHandler<GetRolesQuery, List
         _roleRepository = roleRepository;
     }
 
-    public async Task<List<AppRole>> Handle(GetRolesQuery request, CancellationToken cancellationToken)
+    public async Task<List<GetRolesQueryResponse>> Handle(GetRolesQuery request, CancellationToken cancellationToken)
     {
-        return await _roleRepository.GetAll().OrderBy(r => r.Name).ToListAsync();
+        var response =
+            await _roleRepository.GetAll()
+            .Select(r => new GetRolesQueryResponse(r.Id, r.Name!))
+            .ToListAsync(cancellationToken);
+
+        return response;
     }
 }

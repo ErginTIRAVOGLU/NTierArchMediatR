@@ -12,6 +12,31 @@ internal class Repository<T>(AppDbContext context) : IRepository<T>
         await context.Set<T>().AddAsync(entity, cancellationToken);
     }
 
+    public async Task AddRangeAsync(List<T> entities, CancellationToken cancellationToken)
+    {
+        await context.Set<T>().AddRangeAsync(entities, cancellationToken);
+    }
+
+    public void Update(T entity)
+    {
+        context.Set<T>().Update(entity);
+    }
+
+    public void UpdateRange(List<T> entities)
+    {
+        context.Set<T>().UpdateRange(entities);
+    }
+
+    public void Remove(T entity)
+    {
+        context.Set<T>().Remove(entity);
+    }
+
+    public void RemoveRange(List<T> entities)
+    {
+        context.Set<T>().RemoveRange(entities);
+    }
+
     public async Task<bool> AnyAsync(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken)
     {
         return await context.Set<T>().AnyAsync(predicate, cancellationToken);
@@ -30,25 +55,5 @@ internal class Repository<T>(AppDbContext context) : IRepository<T>
     public IQueryable<T> GetWhere(Expression<Func<T, bool>> predicate)
     {
         return context.Set<T>().Where(predicate).AsQueryable();
-    }
-
-    public void Remove(T entity)
-    {
-        context.Set<T>().Remove(entity);
-    }
-
-    public void RemoveRange(List<T> entities)
-    {
-        context.Set<T>().RemoveRange(entities);
-    }
-
-    public void Update(T entity)
-    {
-        context.Set<T>().Update(entity);
-    }
-
-    public void UpdateRange(List<T> entities)
-    {
-        context.Set<T>().UpdateRange(entities);
     }
 }

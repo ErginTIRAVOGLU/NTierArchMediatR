@@ -1,0 +1,13 @@
+D:\Projects\Backend\NTierArch\NTierAcrh.Entities\bin\Debug\net8.0\NTierAcrh.Entities.deps.json
+D:\Projects\Backend\NTierArch\NTierAcrh.Entities\bin\Debug\net8.0\NTierAcrh.Entities.dll
+D:\Projects\Backend\NTierArch\NTierAcrh.Entities\bin\Debug\net8.0\NTierAcrh.Entities.pdb
+D:\Projects\Backend\NTierArch\NTierAcrh.Entities\obj\Debug\net8.0\NTierAcrh.Entities.csproj.AssemblyReference.cache
+D:\Projects\Backend\NTierArch\NTierAcrh.Entities\obj\Debug\net8.0\NTierAcrh.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Backend\NTierArch\NTierAcrh.Entities\obj\Debug\net8.0\NTierAcrh.Entities.AssemblyInfoInputs.cache
+D:\Projects\Backend\NTierArch\NTierAcrh.Entities\obj\Debug\net8.0\NTierAcrh.Entities.AssemblyInfo.cs
+D:\Projects\Backend\NTierArch\NTierAcrh.Entities\obj\Debug\net8.0\NTierAcrh.Entities.csproj.CoreCompileInputs.cache
+D:\Projects\Backend\NTierArch\NTierAcrh.Entities\obj\Debug\net8.0\NTierAcrh.Entities.sourcelink.json
+D:\Projects\Backend\NTierArch\NTierAcrh.Entities\obj\Debug\net8.0\NTierAcrh.Entities.dll
+D:\Projects\Backend\NTierArch\NTierAcrh.Entities\obj\Debug\net8.0\refint\NTierAcrh.Entities.dll
+D:\Projects\Backend\NTierArch\NTierAcrh.Entities\obj\Debug\net8.0\NTierAcrh.Entities.pdb
+D:\Projects\Backend\NTierArch\NTierAcrh.Entities\obj\Debug\net8.0\ref\NTierAcrh.Entities.dll
