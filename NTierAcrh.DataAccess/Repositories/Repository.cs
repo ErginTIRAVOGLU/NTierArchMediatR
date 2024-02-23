@@ -37,8 +37,18 @@ internal class Repository<T>(AppDbContext context) : IRepository<T>
         context.Set<T>().Remove(entity);
     }
 
+    public void RemoveRange(List<T> entities)
+    {
+        context.Set<T>().RemoveRange(entities);
+    }
+
     public void Update(T entity)
     {
         context.Set<T>().Update(entity);
+    }
+
+    public void UpdateRange(List<T> entities)
+    {
+        context.Set<T>().UpdateRange(entities);
     }
 }

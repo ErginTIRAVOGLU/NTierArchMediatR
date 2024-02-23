@@ -31,7 +31,7 @@ internal sealed class CategoryAndCategoryProductsDeleteCommandHandler : IRequest
             throw new ArgumentException("Kategoriye ait ürün bulunamadı!");
         }
 
-        await _productRepository.RemoveRangeAsync(products);
+        _productRepository.RemoveRange(products);
         _categoryRepository.Remove(category);
         await _unitOfWork.SaveChangesAsync(cancellationToken);
     }
