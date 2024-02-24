@@ -20,7 +20,7 @@ internal sealed class JwtProvider : IJwtProvider
         _jwt = jwt.Value;
     }
 
-    public async Task<string?> CreateTokenAsync(AppUser user, bool rememberMe)
+    public async Task<string> CreateTokenAsync(AppUser user, bool rememberMe)
     {
         IEnumerable<Claim> claims = new List<Claim>()
         {

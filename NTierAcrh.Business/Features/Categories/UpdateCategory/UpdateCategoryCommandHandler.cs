@@ -1,10 +1,11 @@
 ﻿using AutoMapper;
+using ErrorOr;
 using MediatR;
 using NTierAcrh.Entities.Repositories;
 
 namespace NTierAcrh.Business.Features.Categories.UpdateCategory;
 
-internal sealed class UpdateCategoryCommandHandler : IRequestHandler<UpdateCategoryCommand, Unit>
+internal sealed class UpdateCategoryCommandHandler : IRequestHandler<UpdateCategoryCommand, ErrorOr<Unit>>
 {
     private readonly ICategoryRepository _categoryRepository;
     private readonly IUnitOfWork _unitOfWork;
@@ -17,12 +18,12 @@ internal sealed class UpdateCategoryCommandHandler : IRequestHandler<UpdateCateg
         _mapper = mapper;
     }
 
-    public async Task<Unit> Handle(UpdateCategoryCommand request, CancellationToken cancellationToken)
+    public async Task<ErrorOr<Unit>> Handle(UpdateCategoryCommand request, CancellationToken cancellationToken)
     {
         var category = await _categoryRepository.GetByIdAsync(c => c.Id == request.Id, cancellationToken);
         if (category is null)
         {
-            throw new ArgumentException("Kategori bulunamadı!");
+            return Error.Conflict("CategoryNotFound","Kategori bulunamadı!");
         }
 
         if (category.Name != request.Name)
@@ -31,7 +32,7 @@ internal sealed class UpdateCategoryCommandHandler : IRequestHandler<UpdateCateg
 
             if (isCategoryNameExists)
             {
-                throw new ArgumentException("Bu kategori daha önce oluşturulmuş!");
+                return Error.Conflict("CategoryIsExists","Bu kategori daha önce oluşturulmuş!");
             }
         }
 

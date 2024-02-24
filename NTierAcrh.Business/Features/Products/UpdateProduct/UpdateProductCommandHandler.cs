@@ -1,9 +1,10 @@
 ﻿using AutoMapper;
+using ErrorOr;
 using MediatR;
 using NTierAcrh.Entities.Repositories;
 
 namespace NTierAcrh.Business.Features.Products.UpdateProduct;
-internal class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand, Unit>
+internal class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand, ErrorOr<Unit>>
 {
     private readonly IProductRepository _productRepository;
     private readonly IUnitOfWork _unitOfWork;
@@ -16,16 +17,16 @@ internal class UpdateProductCommandHandler : IRequestHandler<UpdateProductComman
         _mapper = mapper;
     }
 
-    public async Task<Unit> Handle(UpdateProductCommand request, CancellationToken cancellationToken)
+    public async Task<ErrorOr<Unit>> Handle(UpdateProductCommand request, CancellationToken cancellationToken)
     {
         var product = await _productRepository.GetByIdAsync(p => p.Id == request.Id, cancellationToken);
         if (product is null)
         {
-            throw new ArgumentException("Ürün bulunamadı!");
+            return Error.Conflict("ProductNotFound","Ürün bulunamadı!");
         }
         if (product.Name != request.Name)
         {
-            throw new ArgumentException("Bu ürün daha önce oluşturulmuş!");
+            return Error.Conflict("ProductIsExists","Bu ürün daha önce oluşturulmuş!");
         }
         product.UpdatedDate = DateTime.Now;
         _mapper.Map(request, product);

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NTierAcrh.Business")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60b806edfcc5da6b35c06d5a03d1bc397a3e859f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9f2f3c8e2c3987656f8ef631ceb410c91c44f22")]
 [assembly: System.Reflection.AssemblyProductAttribute("NTierAcrh.Business")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NTierAcrh.Business")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

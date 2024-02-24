@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using ErrorOr;
+using MediatR;
 
 namespace NTierAcrh.Business.Features.Products.CreateProduct;
 public sealed record CreateProductCommand(
@@ -8,4 +9,4 @@ public sealed record CreateProductCommand(
     decimal Price,
     int Quantity,
     Guid CategoryId
-) : IRequest<Unit>;
+) : IRequest<ErrorOr<Unit>>;

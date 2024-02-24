@@ -1,10 +1,11 @@
 ﻿using AutoMapper;
+using ErrorOr;
 using MediatR;
 using NTierAcrh.Entities.Models;
 using NTierAcrh.Entities.Repositories;
 
 namespace NTierAcrh.Business.Features.Products.CreateProduct;
-internal sealed class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, Unit>
+internal sealed class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, ErrorOr<Unit>>
 {
     private readonly IProductRepository _productRepository;
     private readonly IUnitOfWork _unitOfWork;
@@ -17,12 +18,12 @@ internal sealed class CreateProductCommandHandler : IRequestHandler<CreateProduc
         _mapper = mapper;
     }
 
-    public async Task<Unit> Handle(CreateProductCommand request, CancellationToken cancellationToken)
+    public async Task<ErrorOr<Unit>> Handle(CreateProductCommand request, CancellationToken cancellationToken)
     {
         var isProductExists = await _productRepository.AnyAsync(p => p.Name == request.Name, cancellationToken);
         if (isProductExists)
         {
-            throw new ArgumentException("Bu ürün daha önce kaydedilmiş!");
+            return Error.Conflict("ProductIsExists", "Bu ürün daha önce kaydedilmiş!");
         }
 
         var product = _mapper.Map<Product>(request);

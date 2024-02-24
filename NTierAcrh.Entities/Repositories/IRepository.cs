@@ -13,4 +13,5 @@ public interface IRepository<T>
     IQueryable<T> GetAll();
     IQueryable<T> GetWhere(Expression<Func<T, bool>>? predicate = default);
     Task<bool> AnyAsync(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken);
+    bool Any(Expression<Func<T, bool>> predicate);
 }

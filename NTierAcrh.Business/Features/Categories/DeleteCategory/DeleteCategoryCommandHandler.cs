@@ -1,9 +1,10 @@
 ﻿using AutoMapper;
+using ErrorOr;
 using MediatR;
 using NTierAcrh.Entities.Repositories;
 
 namespace NTierAcrh.Business.Features.Categories.DeleteCategory;
-internal sealed class DeleteCategoryCommandHandler : IRequestHandler<DeleteCategoryCommand, Unit>
+internal sealed class DeleteCategoryCommandHandler : IRequestHandler<DeleteCategoryCommand, ErrorOr<Unit>>
 {
     private readonly ICategoryRepository _categoryRepository;
     private readonly IUnitOfWork _unitOfWork;
@@ -16,12 +17,12 @@ internal sealed class DeleteCategoryCommandHandler : IRequestHandler<DeleteCateg
         _mapper = mapper;
     }
 
-    public async Task<Unit> Handle(DeleteCategoryCommand request, CancellationToken cancellationToken)
+    public async Task<ErrorOr<Unit>> Handle(DeleteCategoryCommand request, CancellationToken cancellationToken)
     {
         var category = await _categoryRepository.GetByIdAsync(c => c.Id == request.Id, cancellationToken);
         if (category is null)
         {
-            throw new ArgumentException("Kategori bulunamadı!");
+            return Error.Conflict("CategoryNotFound", "Kategori Bulunamadı");
         }
 
         category.DeletedDate = DateTime.Now;

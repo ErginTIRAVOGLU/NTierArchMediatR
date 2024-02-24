@@ -18,13 +18,14 @@ public static class DependencyInjection
         });
 
         //User ayarlarında Parola ile ilgili ayar yaptık numaratik karakterler istemedik
-        services.AddIdentityCore<AppUser>(userConfigura =>
+        services.AddIdentityCore<AppUser>(userConfigure =>
         {
-            userConfigura.Password.RequireNonAlphanumeric = false;
+            userConfigure.Password.RequireNonAlphanumeric = false;
         }).AddEntityFrameworkStores<AppDbContext>();
 
         //UnitOfWork Dependency Injection Yaptık
         services.AddScoped<IUnitOfWork>(sv => sv.GetRequiredService<AppDbContext>());
+        
         //İlgili Repository lerin Dependency Injectionlarını Yaptık ama degiştirip Scrutor ile yapıyoruz
         //services.AddScoped<ICategoryRepository, CategoryRepository>();
 

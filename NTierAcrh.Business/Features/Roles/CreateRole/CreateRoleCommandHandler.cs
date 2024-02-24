@@ -1,10 +1,11 @@
 ﻿using AutoMapper;
+using ErrorOr;
 using MediatR;
 using NTierAcrh.Entities.Models;
 using NTierAcrh.Entities.Repositories;
 
 namespace NTierAcrh.Business.Features.Roles.CreateRole;
-internal sealed class CreateRoleCommandHandler : IRequestHandler<CreateRoleCommand, Unit>
+internal sealed class CreateRoleCommandHandler : IRequestHandler<CreateRoleCommand, ErrorOr<Unit>>
 {
     private readonly IRoleRepository _roleRepository;
     private readonly IUnitOfWork _unitOfWork;
@@ -17,12 +18,12 @@ internal sealed class CreateRoleCommandHandler : IRequestHandler<CreateRoleComma
         _mapper = mapper;
     }
 
-    public async Task<Unit> Handle(CreateRoleCommand request, CancellationToken cancellationToken)
+    public async Task<ErrorOr<Unit>> Handle(CreateRoleCommand request, CancellationToken cancellationToken)
     {
         var checkRoleIsExists = await _roleRepository.AnyAsync(p => p.Name == request.Name, cancellationToken);
         if (checkRoleIsExists)
         {
-            throw new ArgumentException("Bu rol daha önce oluşturulmuş");
+            return Error.Conflict("RoleIsExists", "Bu rol daha önce oluşturulmuş");
         }
 
         var role = _mapper.Map<AppRole>(request);

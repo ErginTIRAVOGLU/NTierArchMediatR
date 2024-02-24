@@ -8,11 +8,13 @@ D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\bin\Debug\net8.0\NTierAcrh.WebAPI
 D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\bin\Debug\net8.0\AutoMapper.dll
 D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\bin\Debug\net8.0\Azure.Core.dll
 D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\bin\Debug\net8.0\Azure.Identity.dll
+D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\bin\Debug\net8.0\ErrorOr.dll
 D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\bin\Debug\net8.0\FluentValidation.dll
 D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\bin\Debug\net8.0\Humanizer.dll
 D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\bin\Debug\net8.0\MediatR.dll
 D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\bin\Debug\net8.0\MediatR.Contracts.dll
+D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -43,6 +45,7 @@ D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\bin\Debug\net8.0\Microsoft.OpenAp
 D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\bin\Debug\net8.0\Scrutor.dll
 D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -153,4 +156,3 @@ D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\obj\Debug\net8.0\refint\NTierAcrh
 D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\obj\Debug\net8.0\NTierAcrh.WebAPI.pdb
 D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\obj\Debug\net8.0\NTierAcrh.WebAPI.genruntimeconfig.cache
 D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\obj\Debug\net8.0\ref\NTierAcrh.WebAPI.dll
-D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -1,9 +1,10 @@
 ﻿using AutoMapper;
+using ErrorOr;
 using MediatR;
 using NTierAcrh.Entities.Repositories;
 
 namespace NTierAcrh.Business.Features.Products.DeleteProduct;
-internal sealed class DeleteProductCommandHandler : IRequestHandler<DeleteProductCommand, Unit>
+internal sealed class DeleteProductCommandHandler : IRequestHandler<DeleteProductCommand, ErrorOr<Unit>>
 {
     private readonly IProductRepository _productRepository;
     private readonly IUnitOfWork _unitOfWork;
@@ -16,12 +17,12 @@ internal sealed class DeleteProductCommandHandler : IRequestHandler<DeleteProduc
         _mapper = mapper;
     }
 
-    public async Task<Unit> Handle(DeleteProductCommand request, CancellationToken cancellationToken)
+    public async Task<ErrorOr<Unit>> Handle(DeleteProductCommand request, CancellationToken cancellationToken)
     {
         var product = await _productRepository.GetByIdAsync(p => p.Id == request.Id, cancellationToken);
         if (product is null)
         {
-            throw new ArgumentException("Ürün bulunamadı!");
+            return Error.Conflict("ProductNotFound","Ürün bulunamadı!");
         }
 
         product.IsHidden = true;

@@ -1,9 +1,10 @@
-﻿using MediatR;
+﻿using ErrorOr;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using NTierAcrh.Entities.Repositories;
 
 namespace NTierAcrh.Business.Features.Categories.DeleteCategory;
-internal sealed class CategoryDeleteAndCategoryProductsUpdateCommandHandler : IRequestHandler<CategoryDeleteAndCategoryProductsUpdateCommand, Unit>
+internal sealed class CategoryDeleteAndCategoryProductsUpdateCommandHandler : IRequestHandler<CategoryDeleteAndCategoryProductsUpdateCommand, ErrorOr<Unit>>
 {
     private readonly ICategoryRepository _categoryRepository;
     private readonly IUnitOfWork _unitOfWork;
@@ -16,12 +17,12 @@ internal sealed class CategoryDeleteAndCategoryProductsUpdateCommandHandler : IR
         _productRepository = productRepository;
     }
 
-    public async Task<Unit> Handle(CategoryDeleteAndCategoryProductsUpdateCommand request, CancellationToken cancellationToken)
+    public async Task<ErrorOr<Unit>> Handle(CategoryDeleteAndCategoryProductsUpdateCommand request, CancellationToken cancellationToken)
     {
         var category = await _categoryRepository.GetByIdAsync(c => c.Id == request.Id, cancellationToken);
         if (category is null)
         {
-            throw new ArgumentException("Kategori bulunamadı!");
+            return Error.Conflict("CategoryNotFound","Kategori bulunamadı!");
         }
 
         if (request.newCategoryId != Guid.Empty)
@@ -29,7 +30,7 @@ internal sealed class CategoryDeleteAndCategoryProductsUpdateCommandHandler : IR
             var newCategory = await _categoryRepository.GetByIdAsync(c => c.Id == request.newCategoryId, cancellationToken);
             if (newCategory is null)
             {
-                throw new ArgumentException("Ürünlerin aktarılacagı kategori bulunamadı!");
+                return Error.Conflict("NewCategoryNotFound", "Ürünlerin aktarılacagı kategori bulunamadı!");
             }
 
             if (category.Products != null)

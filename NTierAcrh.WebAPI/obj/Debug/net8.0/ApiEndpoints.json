@@ -158,5 +158,53 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NTierAcrh.WebAPI.Controllers.RolesController",
+    "Method": "Create",
+    "RelativePath": "api/Roles/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "NTierAcrh.Business.Features.Roles.CreateRole.CreateRoleCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NTierAcrh.WebAPI.Controllers.RolesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Roles/GetAll",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "NTierAcrh.Business.Features.Roles.GetRoles.GetRolesQuery",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NTierAcrh.WebAPI.Controllers.UserRolesController",
+    "Method": "SetRole",
+    "RelativePath": "api/UserRoles/SetRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "NTierAcrh.Business.Features.UserRoles.SetUserRole.SetUserRoleCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

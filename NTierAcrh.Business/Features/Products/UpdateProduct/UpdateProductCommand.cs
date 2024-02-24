@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using ErrorOr;
+using MediatR;
 
 namespace NTierAcrh.Business.Features.Products.UpdateProduct;
 public sealed record UpdateProductCommand(
@@ -9,4 +10,4 @@ public sealed record UpdateProductCommand(
     string Name,
     decimal Price,
     int Quantity
- ) : IRequest<Unit>;
+ ) : IRequest<ErrorOr<Unit>>;

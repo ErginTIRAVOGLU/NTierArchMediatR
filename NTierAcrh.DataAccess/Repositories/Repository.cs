@@ -56,4 +56,9 @@ internal class Repository<T>(AppDbContext context) : IRepository<T>
     {
         return context.Set<T>().Where(predicate).AsQueryable();
     }
+
+    public bool Any(Expression<Func<T, bool>> predicate)
+    {
+        return context.Set<T>().Any(predicate);
+    }
 }

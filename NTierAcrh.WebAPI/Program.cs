@@ -6,11 +6,11 @@ using Microsoft.OpenApi.Models;
 using NTierAcrh.Business;
 using NTierAcrh.DataAccess;
 using NTierAcrh.Entities.Options;
+using NTierAcrh.WebAPI.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
 //DependencyInjections
-
 builder.Services.Configure<Jwt>(builder.Configuration.GetSection("Jwt"));
 
 var serviceProvider = builder.Services.BuildServiceProvider();
@@ -34,6 +34,11 @@ builder.Services.AddAuthorization();
 
 builder.Services.AddDataAccess(builder.Configuration);
 builder.Services.AddBusiness();
+
+//ExceptionMiddleware app start new ExceptionMiddleware() to application exit lifetime
+builder.Services.AddTransient<ExceptionMiddleware>();
+//ExceptionMiddleware app start new ExceptionMiddleware() to application exit lifetime
+
 //DependencyInjections
 
 builder.Services.AddControllers();
@@ -74,6 +79,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+//ExceptionMiddleware Dependency Injection
+app.UseMiddleware<ExceptionMiddleware>();
+//ExceptionMiddleware Dependency Injection
 
 app.UseHttpsRedirection();
 

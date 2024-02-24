@@ -53,6 +53,10 @@
               "target": "Package",
               "version": "[13.0.1, )"
             },
+            "ErrorOr": {
+              "target": "Package",
+              "version": "[1.10.0, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[11.9.0, )"
