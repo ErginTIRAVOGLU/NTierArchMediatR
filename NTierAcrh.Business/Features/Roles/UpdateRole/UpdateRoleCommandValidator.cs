@@ -1,9 +1,9 @@
 ﻿using FluentValidation;
 
-namespace NTierAcrh.Business.Features.Roles.CreateRole;
-internal sealed class CreateRoleValidator : AbstractValidator<CreateRoleCommand>
+namespace NTierAcrh.Business.Features.Roles.UpdateRole;
+public sealed class UpdateRoleCommandValidator : AbstractValidator<UpdateRoleCommand>
 {
-    public CreateRoleValidator()
+    public UpdateRoleCommandValidator()
     {
         RuleFor(r => r.Name).NotNull().WithMessage("Rol adı boş olamaz!");
         RuleFor(r => r.Name).NotEmpty().WithMessage("Rol adı boş olamaz!");

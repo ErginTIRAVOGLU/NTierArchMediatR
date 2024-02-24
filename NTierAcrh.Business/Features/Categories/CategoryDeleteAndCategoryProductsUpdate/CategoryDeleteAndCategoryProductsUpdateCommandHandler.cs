@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using NTierAcrh.Entities.Repositories;
 
 namespace NTierAcrh.Business.Features.Categories.DeleteCategory;
-internal sealed class CategoryDeleteAndCategoryProductsUpdateCommandHandler : IRequestHandler<CategoryDeleteAndCategoryProductsUpdateCommand>
+internal sealed class CategoryDeleteAndCategoryProductsUpdateCommandHandler : IRequestHandler<CategoryDeleteAndCategoryProductsUpdateCommand, Unit>
 {
     private readonly ICategoryRepository _categoryRepository;
     private readonly IUnitOfWork _unitOfWork;
@@ -16,7 +16,7 @@ internal sealed class CategoryDeleteAndCategoryProductsUpdateCommandHandler : IR
         _productRepository = productRepository;
     }
 
-    public async Task Handle(CategoryDeleteAndCategoryProductsUpdateCommand request, CancellationToken cancellationToken)
+    public async Task<Unit> Handle(CategoryDeleteAndCategoryProductsUpdateCommand request, CancellationToken cancellationToken)
     {
         var category = await _categoryRepository.GetByIdAsync(c => c.Id == request.Id, cancellationToken);
         if (category is null)
@@ -63,5 +63,7 @@ internal sealed class CategoryDeleteAndCategoryProductsUpdateCommandHandler : IR
 
         _categoryRepository.Remove(category);
         await _unitOfWork.SaveChangesAsync(cancellationToken);
+
+        return Unit.Value;
     }
 }

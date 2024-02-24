@@ -1,4 +1,4 @@
 ﻿using MediatR;
 
 namespace NTierAcrh.Business.Features.Categories.CategoryAndCategoryProductsDelete;
-public sealed record CategoryAndCategoryProductsDeleteCommand(Guid Id) : IRequest;
+public sealed record CategoryAndCategoryProductsDeleteCommand(Guid Id) : IRequest<Unit>;

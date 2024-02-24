@@ -1,9 +1,9 @@
 ﻿using FluentValidation;
 
 namespace NTierAcrh.Business.Features.Categories.UpdateCategory;
-internal sealed class UpdateCategoryValidator : AbstractValidator<UpdateCategoryCommand>
+public sealed class UpdateCategoryCommandValidator : AbstractValidator<UpdateCategoryCommand>
 {
-    public UpdateCategoryValidator()
+    public UpdateCategoryCommandValidator()
     {
         RuleFor(c => c.Name).NotEmpty().WithMessage("Kategori adı boş olamaz!");
         RuleFor(c => c.Name).NotNull().WithMessage("Kategori adı boş olamaz!");

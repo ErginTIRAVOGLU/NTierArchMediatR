@@ -153,3 +153,4 @@ D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\obj\Debug\net8.0\refint\NTierAcrh
 D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\obj\Debug\net8.0\NTierAcrh.WebAPI.pdb
 D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\obj\Debug\net8.0\NTierAcrh.WebAPI.genruntimeconfig.cache
 D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\obj\Debug\net8.0\ref\NTierAcrh.WebAPI.dll
+D:\Projects\Backend\NTierArch\NTierAcrh.WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

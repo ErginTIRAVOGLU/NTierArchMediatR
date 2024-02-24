@@ -4,7 +4,7 @@ using NTierAcrh.Entities.Repositories;
 
 namespace NTierAcrh.Business.Features.Roles.UpdateRole;
 
-internal sealed class UpdateRoleCommandHandler : IRequestHandler<UpdateRoleCommand>
+internal sealed class UpdateRoleCommandHandler : IRequestHandler<UpdateRoleCommand, Unit>
 {
     private readonly IRoleRepository _roleRepository;
     private readonly IUnitOfWork _unitOfWork;
@@ -17,7 +17,7 @@ internal sealed class UpdateRoleCommandHandler : IRequestHandler<UpdateRoleComma
         _mapper = mapper;
     }
 
-    public async Task Handle(UpdateRoleCommand request, CancellationToken cancellationToken)
+    public async Task<Unit> Handle(UpdateRoleCommand request, CancellationToken cancellationToken)
     {
         var role = await _roleRepository.GetByIdAsync(r => r.Id == request.Id, cancellationToken);
         if (role is null)
@@ -32,5 +32,7 @@ internal sealed class UpdateRoleCommandHandler : IRequestHandler<UpdateRoleComma
         _mapper.Map(request, role);
 
         await _unitOfWork.SaveChangesAsync(cancellationToken);
+
+        return Unit.Value;
     }
 }

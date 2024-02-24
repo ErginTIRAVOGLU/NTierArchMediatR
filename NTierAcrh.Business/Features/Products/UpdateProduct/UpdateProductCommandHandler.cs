@@ -1,19 +1,22 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
 using NTierAcrh.Entities.Repositories;
 
 namespace NTierAcrh.Business.Features.Products.UpdateProduct;
-internal class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand>
+internal class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand, Unit>
 {
     private readonly IProductRepository _productRepository;
     private readonly IUnitOfWork _unitOfWork;
+    private readonly IMapper _mapper;
 
-    public UpdateProductCommandHandler(IProductRepository productRepository, IUnitOfWork unitOfWork)
+    public UpdateProductCommandHandler(IProductRepository productRepository, IUnitOfWork unitOfWork, IMapper mapper)
     {
         _productRepository = productRepository;
         _unitOfWork = unitOfWork;
+        _mapper = mapper;
     }
 
-    public async Task Handle(UpdateProductCommand request, CancellationToken cancellationToken)
+    public async Task<Unit> Handle(UpdateProductCommand request, CancellationToken cancellationToken)
     {
         var product = await _productRepository.GetByIdAsync(p => p.Id == request.Id, cancellationToken);
         if (product is null)
@@ -24,11 +27,11 @@ internal class UpdateProductCommandHandler : IRequestHandler<UpdateProductComman
         {
             throw new ArgumentException("Bu ürün daha önce oluşturulmuş!");
         }
-        product.CategoryId = request.CategoryId;
-        product.Name = request.Name;
-        product.Price = request.Price;
-        product.Quantity = request.Quantity;
+        product.UpdatedDate = DateTime.Now;
+        _mapper.Map(request, product);
 
         await _unitOfWork.SaveChangesAsync(cancellationToken);
+
+        return Unit.Value;
     }
 }

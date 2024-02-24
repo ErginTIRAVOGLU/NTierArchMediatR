@@ -2,6 +2,7 @@
 
 namespace NTierAcrh.Business.Features.Categories.UpdateCategory;
 public sealed record UpdateCategoryCommand(
-    Guid UpdatedById,
     Guid Id,
-    string Name) : IRequest;
+    Guid UpdatedById,
+    string Name
+) : IRequest<Unit>;

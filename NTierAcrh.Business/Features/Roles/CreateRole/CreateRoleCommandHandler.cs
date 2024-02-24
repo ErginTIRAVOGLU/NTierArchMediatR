@@ -4,7 +4,7 @@ using NTierAcrh.Entities.Models;
 using NTierAcrh.Entities.Repositories;
 
 namespace NTierAcrh.Business.Features.Roles.CreateRole;
-internal sealed class CreateRoleCommandHandler : IRequestHandler<CreateRoleCommand>
+internal sealed class CreateRoleCommandHandler : IRequestHandler<CreateRoleCommand, Unit>
 {
     private readonly IRoleRepository _roleRepository;
     private readonly IUnitOfWork _unitOfWork;
@@ -17,17 +17,24 @@ internal sealed class CreateRoleCommandHandler : IRequestHandler<CreateRoleComma
         _mapper = mapper;
     }
 
-    public async Task Handle(CreateRoleCommand request, CancellationToken cancellationToken)
+    public async Task<Unit> Handle(CreateRoleCommand request, CancellationToken cancellationToken)
     {
-        var roleIsExists = await _roleRepository.AnyAsync(r => r.Name == request.Name, cancellationToken);
-        if (roleIsExists)
+        var checkRoleIsExists = await _roleRepository.AnyAsync(p => p.Name == request.Name, cancellationToken);
+        if (checkRoleIsExists)
         {
-            throw new ArgumentException("Rol daha önce eklenmiş!");
+            throw new ArgumentException("Bu rol daha önce oluşturulmuş");
         }
 
-        AppRole role = _mapper.Map<AppRole>(request);
+        var role = _mapper.Map<AppRole>(request);
+        //AppRole? role = new()
+        //{
+        //    Id = Guid.NewGuid(),
+        //    Name = request.Name
+        //};
 
-        await _roleRepository.AddAsync(role);
+        await _roleRepository.AddAsync(role, cancellationToken);
         await _unitOfWork.SaveChangesAsync(cancellationToken);
+
+        return Unit.Value;
     }
 }

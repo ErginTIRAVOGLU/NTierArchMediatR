@@ -4,7 +4,7 @@ using NTierAcrh.Entities.Repositories;
 
 namespace NTierAcrh.Business.Features.Categories.UpdateCategory;
 
-internal sealed class UpdateCategoryCommandHandler : IRequestHandler<UpdateCategoryCommand>
+internal sealed class UpdateCategoryCommandHandler : IRequestHandler<UpdateCategoryCommand, Unit>
 {
     private readonly ICategoryRepository _categoryRepository;
     private readonly IUnitOfWork _unitOfWork;
@@ -17,7 +17,7 @@ internal sealed class UpdateCategoryCommandHandler : IRequestHandler<UpdateCateg
         _mapper = mapper;
     }
 
-    public async Task Handle(UpdateCategoryCommand request, CancellationToken cancellationToken)
+    public async Task<Unit> Handle(UpdateCategoryCommand request, CancellationToken cancellationToken)
     {
         var category = await _categoryRepository.GetByIdAsync(c => c.Id == request.Id, cancellationToken);
         if (category is null)
@@ -27,13 +27,20 @@ internal sealed class UpdateCategoryCommandHandler : IRequestHandler<UpdateCateg
 
         if (category.Name != request.Name)
         {
-            throw new ArgumentException("Bu kategori daha önce oluşturulmuş!");
+            var isCategoryNameExists = await _categoryRepository.AnyAsync(p => p.Name == request.Name, cancellationToken);
+
+            if (isCategoryNameExists)
+            {
+                throw new ArgumentException("Bu kategori daha önce oluşturulmuş!");
+            }
         }
 
-        category.UpdatedDate = DateTime.Now;
         //Update işleminde mapper kullanımı
+        category.UpdatedDate = DateTime.Now;
         _mapper.Map(request, category);
 
         await _unitOfWork.SaveChangesAsync(cancellationToken);
+
+        return Unit.Value;
     }
 }

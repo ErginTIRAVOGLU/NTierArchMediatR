@@ -4,7 +4,7 @@ using NTierAcrh.Entities.Repositories;
 
 namespace NTierAcrh.Business.Features.Categories.CategoryAndCategoryProductsDelete;
 
-internal sealed class CategoryAndCategoryProductsDeleteCommandHandler : IRequestHandler<CategoryAndCategoryProductsDeleteCommand>
+internal sealed class CategoryAndCategoryProductsDeleteCommandHandler : IRequestHandler<CategoryAndCategoryProductsDeleteCommand, Unit>
 {
     private readonly ICategoryRepository _categoryRepository;
     private readonly IUnitOfWork _unitOfWork;
@@ -17,7 +17,7 @@ internal sealed class CategoryAndCategoryProductsDeleteCommandHandler : IRequest
         _productRepository = productRepository;
     }
 
-    public async Task Handle(CategoryAndCategoryProductsDeleteCommand request, CancellationToken cancellationToken)
+    public async Task<Unit> Handle(CategoryAndCategoryProductsDeleteCommand request, CancellationToken cancellationToken)
     {
         var category = await _categoryRepository.GetByIdAsync(c => c.Id == request.Id, cancellationToken);
         if (category is null)
@@ -34,5 +34,7 @@ internal sealed class CategoryAndCategoryProductsDeleteCommandHandler : IRequest
         _productRepository.RemoveRange(products);
         _categoryRepository.Remove(category);
         await _unitOfWork.SaveChangesAsync(cancellationToken);
+
+        return Unit.Value;
     }
 }

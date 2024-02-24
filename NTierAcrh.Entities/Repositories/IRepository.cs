@@ -11,6 +11,6 @@ public interface IRepository<T>
     void RemoveRange(List<T> entities);
     Task<T?> GetByIdAsync(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken);
     IQueryable<T> GetAll();
-    IQueryable<T> GetWhere(Expression<Func<T, bool>> predicate = default);
+    IQueryable<T> GetWhere(Expression<Func<T, bool>>? predicate = default);
     Task<bool> AnyAsync(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken);
 }

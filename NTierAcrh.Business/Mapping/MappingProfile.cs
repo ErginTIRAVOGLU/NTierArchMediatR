@@ -4,6 +4,7 @@ using NTierAcrh.Business.Features.Categories.UpdateCategory;
 using NTierAcrh.Business.Features.Products.CreateProduct;
 using NTierAcrh.Business.Features.Products.UpdateProduct;
 using NTierAcrh.Business.Features.Roles.CreateRole;
+using NTierAcrh.Business.Features.Roles.UpdateRole;
 using NTierAcrh.Entities.Models;
 
 namespace NTierAcrh.Business.Mapping;
@@ -18,5 +19,6 @@ internal sealed class MappingProfile : Profile
         CreateMap<UpdateProductCommand, Product>();
 
         CreateMap<CreateRoleCommand, AppRole>();
+        CreateMap<UpdateRoleCommand, AppRole>();
     }
 }

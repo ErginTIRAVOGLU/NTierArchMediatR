@@ -2,5 +2,6 @@
 
 namespace NTierAcrh.Business.Features.Categories.DeleteCategory;
 public sealed record DeleteCategoryCommand(
-    Guid DeletedById,
-    Guid Id) : IRequest;
+    Guid Id,
+    Guid DeletedById
+) : IRequest<Unit>;

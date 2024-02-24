@@ -3,7 +3,7 @@ using NTierAcrh.Entities.Repositories;
 
 namespace NTierAcrh.Business.Features.Roles.DeleteRole;
 
-internal sealed class DeleteRoleCommandHandler : IRequestHandler<DeleteRoleCommand>
+internal sealed class DeleteRoleCommandHandler : IRequestHandler<DeleteRoleCommand, Unit>
 {
     private readonly IRoleRepository _roleRepository;
     private readonly IUnitOfWork _unitOfWork;
@@ -14,7 +14,7 @@ internal sealed class DeleteRoleCommandHandler : IRequestHandler<DeleteRoleComma
         _unitOfWork = unitOfWork;
     }
 
-    public async Task Handle(DeleteRoleCommand request, CancellationToken cancellationToken)
+    public async Task<Unit> Handle(DeleteRoleCommand request, CancellationToken cancellationToken)
     {
         var role = await _roleRepository.GetByIdAsync(r => r.Id == request.Id, cancellationToken);
         if (role is null)
@@ -24,5 +24,7 @@ internal sealed class DeleteRoleCommandHandler : IRequestHandler<DeleteRoleComma
 
         _roleRepository.Remove(role);
         await _unitOfWork.SaveChangesAsync(cancellationToken);
+
+        return Unit.Value;
     }
 }

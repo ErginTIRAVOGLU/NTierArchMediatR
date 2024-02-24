@@ -1,20 +1,23 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
 using NTierAcrh.Entities.Models;
 using NTierAcrh.Entities.Repositories;
 
 namespace NTierAcrh.Business.Features.Products.CreateProduct;
-internal sealed class CreateProductCommandHandler : IRequestHandler<CreateProductCommand>
+internal sealed class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, Unit>
 {
-    IProductRepository _productRepository;
+    private readonly IProductRepository _productRepository;
     private readonly IUnitOfWork _unitOfWork;
+    private readonly IMapper _mapper;
 
-    public CreateProductCommandHandler(IProductRepository productRepository, IUnitOfWork unitOfWork)
+    public CreateProductCommandHandler(IProductRepository productRepository, IUnitOfWork unitOfWork, IMapper mapper)
     {
         _productRepository = productRepository;
         _unitOfWork = unitOfWork;
+        _mapper = mapper;
     }
 
-    public async Task Handle(CreateProductCommand request, CancellationToken cancellationToken)
+    public async Task<Unit> Handle(CreateProductCommand request, CancellationToken cancellationToken)
     {
         var isProductExists = await _productRepository.AnyAsync(p => p.Name == request.Name, cancellationToken);
         if (isProductExists)
@@ -22,15 +25,11 @@ internal sealed class CreateProductCommandHandler : IRequestHandler<CreateProduc
             throw new ArgumentException("Bu ürün daha önce kaydedilmiş!");
         }
 
-        Product product = new()
-        {
-            CategoryId = request.CategoryId,
-            Name = request.Name,
-            Price = request.Price,
-            Quantity = request.Quantity,
-        };
+        var product = _mapper.Map<Product>(request);
 
         await _productRepository.AddAsync(product);
         await _unitOfWork.SaveChangesAsync(cancellationToken);
+
+        return Unit.Value;
     }
 }

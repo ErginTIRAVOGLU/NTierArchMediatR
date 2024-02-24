@@ -2,7 +2,10 @@
 
 namespace NTierAcrh.Business.Features.Products.CreateProduct;
 public sealed record CreateProductCommand(
-    Guid CategoryId,
+    Guid CreatedById,
+
     string Name,
     decimal Price,
-    int Quantity) : IRequest;
+    int Quantity,
+    Guid CategoryId
+) : IRequest<Unit>;
