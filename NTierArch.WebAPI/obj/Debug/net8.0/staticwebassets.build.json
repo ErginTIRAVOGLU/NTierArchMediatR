@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "euTQDr4s20r888HU14rlMlrHpc/K8CIRpUEN6Q2COWQ=",
+  "Source": "NTierArch.WebAPI",
+  "BasePath": "_content/NTierArch.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

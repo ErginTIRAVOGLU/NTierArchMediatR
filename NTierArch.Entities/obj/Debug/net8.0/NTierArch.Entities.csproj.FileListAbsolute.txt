@@ -1,0 +1,13 @@
+D:\Projects\Backend\NTierArch\NTierArch.Entities\bin\Debug\net8.0\NTierArch.Entities.deps.json
+D:\Projects\Backend\NTierArch\NTierArch.Entities\bin\Debug\net8.0\NTierArch.Entities.dll
+D:\Projects\Backend\NTierArch\NTierArch.Entities\bin\Debug\net8.0\NTierArch.Entities.pdb
+D:\Projects\Backend\NTierArch\NTierArch.Entities\obj\Debug\net8.0\NTierArch.Entities.csproj.AssemblyReference.cache
+D:\Projects\Backend\NTierArch\NTierArch.Entities\obj\Debug\net8.0\NTierArch.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Backend\NTierArch\NTierArch.Entities\obj\Debug\net8.0\NTierArch.Entities.AssemblyInfoInputs.cache
+D:\Projects\Backend\NTierArch\NTierArch.Entities\obj\Debug\net8.0\NTierArch.Entities.AssemblyInfo.cs
+D:\Projects\Backend\NTierArch\NTierArch.Entities\obj\Debug\net8.0\NTierArch.Entities.csproj.CoreCompileInputs.cache
+D:\Projects\Backend\NTierArch\NTierArch.Entities\obj\Debug\net8.0\NTierArch.Entities.sourcelink.json
+D:\Projects\Backend\NTierArch\NTierArch.Entities\obj\Debug\net8.0\NTierArch.Entities.dll
+D:\Projects\Backend\NTierArch\NTierArch.Entities\obj\Debug\net8.0\refint\NTierArch.Entities.dll
+D:\Projects\Backend\NTierArch\NTierArch.Entities\obj\Debug\net8.0\NTierArch.Entities.pdb
+D:\Projects\Backend\NTierArch\NTierArch.Entities\obj\Debug\net8.0\ref\NTierArch.Entities.dll
