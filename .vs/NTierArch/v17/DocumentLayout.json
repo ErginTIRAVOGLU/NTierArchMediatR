@@ -1,24 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Projects\\Backend\\NTierArch\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{DDFF582D-4952-429F-AF28-E6ACB824B461}|NTierArch.DataAccess\\NTierArch.DataAccess.csproj|d:\\projects\\backend\\ntierarch\\ntierarch.dataaccess\\repositories\\smsparameterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DDFF582D-4952-429F-AF28-E6ACB824B461}|NTierArch.DataAccess\\NTierArch.DataAccess.csproj|solutionrelative:ntierarch.dataaccess\\repositories\\smsparameterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DDFF582D-4952-429F-AF28-E6ACB824B461}|NTierArch.DataAccess\\NTierArch.DataAccess.csproj|d:\\projects\\backend\\ntierarch\\ntierarch.dataaccess\\repositories\\emailparameterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DDFF582D-4952-429F-AF28-E6ACB824B461}|NTierArch.DataAccess\\NTierArch.DataAccess.csproj|solutionrelative:ntierarch.dataaccess\\repositories\\emailparameterrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{53F9D1B9-9DD7-4E3C-B707-DDE0A52983A2}|NTierArch.Business\\NTierArch.Business.csproj|d:\\projects\\backend\\ntierarch\\ntierarch.business\\features\\emailparameters\\sendmail\\sendmailhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{53F9D1B9-9DD7-4E3C-B707-DDE0A52983A2}|NTierArch.Business\\NTierArch.Business.csproj|solutionrelative:ntierarch.business\\features\\emailparameters\\sendmail\\sendmailhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{53F9D1B9-9DD7-4E3C-B707-DDE0A52983A2}|NTierArch.Business\\NTierArch.Business.csproj|d:\\projects\\backend\\ntierarch\\ntierarch.business\\features\\smsparameters\\sendsms\\sendsmshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{53F9D1B9-9DD7-4E3C-B707-DDE0A52983A2}|NTierArch.Business\\NTierArch.Business.csproj|solutionrelative:ntierarch.business\\features\\smsparameters\\sendsms\\sendsmshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 186,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -67,58 +50,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SmsParameterRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\Backend\\NTierArch\\NTierArch.DataAccess\\Repositories\\SmsParameterRepository.cs",
-              "RelativeDocumentMoniker": "NTierArch.DataAccess\\Repositories\\SmsParameterRepository.cs",
-              "ToolTip": "D:\\Projects\\Backend\\NTierArch\\NTierArch.DataAccess\\Repositories\\SmsParameterRepository.cs",
-              "RelativeToolTip": "NTierArch.DataAccess\\Repositories\\SmsParameterRepository.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-02T16:38:20.409Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EmailParameterRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\Backend\\NTierArch\\NTierArch.DataAccess\\Repositories\\EmailParameterRepository.cs",
-              "RelativeDocumentMoniker": "NTierArch.DataAccess\\Repositories\\EmailParameterRepository.cs",
-              "ToolTip": "D:\\Projects\\Backend\\NTierArch\\NTierArch.DataAccess\\Repositories\\EmailParameterRepository.cs",
-              "RelativeToolTip": "NTierArch.DataAccess\\Repositories\\EmailParameterRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-02T15:44:28.863Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SendSmsHandler.cs",
-              "DocumentMoniker": "D:\\Projects\\Backend\\NTierArch\\NTierArch.Business\\Features\\SmsParameters\\SendSms\\SendSmsHandler.cs",
-              "RelativeDocumentMoniker": "NTierArch.Business\\Features\\SmsParameters\\SendSms\\SendSmsHandler.cs",
-              "ToolTip": "D:\\Projects\\Backend\\NTierArch\\NTierArch.Business\\Features\\SmsParameters\\SendSms\\SendSmsHandler.cs",
-              "RelativeToolTip": "NTierArch.Business\\Features\\SmsParameters\\SendSms\\SendSmsHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-02T16:34:04.438Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SendMailHandler.cs",
-              "DocumentMoniker": "D:\\Projects\\Backend\\NTierArch\\NTierArch.Business\\Features\\EmailParameters\\SendMail\\SendMailHandler.cs",
-              "RelativeDocumentMoniker": "NTierArch.Business\\Features\\EmailParameters\\SendMail\\SendMailHandler.cs",
-              "ToolTip": "D:\\Projects\\Backend\\NTierArch\\NTierArch.Business\\Features\\EmailParameters\\SendMail\\SendMailHandler.cs",
-              "RelativeToolTip": "NTierArch.Business\\Features\\EmailParameters\\SendMail\\SendMailHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-02T16:13:00.32Z",
-              "EditorCaption": ""
             }
           ]
         },

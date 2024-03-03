@@ -1,6 +1,7 @@
 ﻿using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using NTierArch.DataAccess.Context;
+using NTierArch.Entities.Abstractions;
 using NTierArch.Entities.Repositories;
 
 namespace NTierArch.DataAccess.Repositories;
@@ -60,5 +61,10 @@ internal class Repository<T>(AppDbContext context) : IRepository<T>
     public bool Any(Expression<Func<T, bool>> predicate)
     {
         return context.Set<T>().Any(predicate);
+    }
+
+    public async Task<T> GetFirst()
+    {
+        return await context.Set<T>().FirstOrDefaultAsync();
     }
 }

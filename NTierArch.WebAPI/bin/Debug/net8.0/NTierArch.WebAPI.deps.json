@@ -1195,6 +1195,7 @@
       },
       "NTierArch.DataAccess/1.0.0": {
         "dependencies": {
+          "MediatR": "12.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.2",
           "Microsoft.AspNetCore.Mvc.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TM8eTeRB8cuQmp1TjXdzLc1uf1hlf1++e+2sJbh7xbfUT/8KpEtSesQCKAbV3+TEUn/AEmKLLF5nBI+JbQdYHg==",
+  "dgSpecHash": "JPjyIUtI75B2o9Etys8/a6fHt36Gd0fZPnW9nomhBcHDchA8IinL+rn9992IH2Z2Vq2esG2RjE0bATdAeW33nA==",
   "success": true,
   "projectFilePath": "D:\\Projects\\Backend\\NTierArch\\NTierArch.WebAPI\\NTierArch.WebAPI.csproj",
   "expectedPackageFiles": [

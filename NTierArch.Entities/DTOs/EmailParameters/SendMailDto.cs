@@ -3,8 +3,7 @@ using MediatR;
 using NTierArch.Entities.Models;
 
 namespace NTierArch.Entities.DTOs.EmailParameters;
-public sealed record SendMailDto(
-    EmailParameter emailParameter,
+public record SendMailDto(
     string subject,
     string body,
     string emails

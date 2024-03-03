@@ -9,6 +9,7 @@ public interface IRepository<T>
     void UpdateRange(List<T> entities);
     void Remove(T entity);
     void RemoveRange(List<T> entities);
+    Task<T> GetFirst();
     Task<T> GetByIdAsync(Expression<Func<T, bool>> predicate, CancellationToken cancellationToken);
     IQueryable<T> GetAll();
     IQueryable<T> GetWhere(Expression<Func<T, bool>> predicate = default);

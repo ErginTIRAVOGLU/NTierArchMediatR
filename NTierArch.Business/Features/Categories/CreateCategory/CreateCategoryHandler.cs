@@ -38,6 +38,7 @@ internal sealed class CreateCategoryHandler : IRequestHandler<CreateCategoryDto,
 
         await _mediator.Publish(new CategoriesDomainEvent(category));
 
+
         return Unit.Value;
     }
 }

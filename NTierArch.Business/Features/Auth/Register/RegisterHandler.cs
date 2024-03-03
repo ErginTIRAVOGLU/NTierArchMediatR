@@ -2,19 +2,25 @@
 using Microsoft.AspNetCore.Identity;
 using NTierArch.Entities.DTOs.Auth;
 using NTierArch.Entities.Events.Users;
+using NTierArch.Entities.Extentions;
 using NTierArch.Entities.Models;
+using NTierArch.Entities.Repositories;
 
 namespace NTierArch.Business.Features.Auth.Register;
 
 internal sealed class RegisterHandler : IRequestHandler<RegisterDto, Unit>
 {
+    private readonly ISmsParameterRepository _smsParameterRepository;
+    private readonly IEmailParameterRepository _emailParameterRepository;
     private readonly UserManager<AppUser> _userManager;
     private readonly IMediator _mediator;
 
-    public RegisterHandler(UserManager<AppUser> userManager, IMediator mediator)
+    public RegisterHandler(UserManager<AppUser> userManager, IMediator mediator, ISmsParameterRepository smsParameterRepository, IEmailParameterRepository emailParameterRepository)
     {
         _userManager = userManager;
         _mediator = mediator;
+        _smsParameterRepository = smsParameterRepository;
+        _emailParameterRepository = emailParameterRepository;
     }
 
     public async Task<Unit> Handle(RegisterDto request, CancellationToken cancellationToken)
@@ -44,6 +50,18 @@ internal sealed class RegisterHandler : IRequestHandler<RegisterDto, Unit>
             Email = request.Email,
             UserName = request.UserName
         };
+
+        //Aşagıda hem email hem sms gönderme kodu yazdık ama kontrol etmeye vaktim olmadı
+        //var subject = "Kullanıcı Kaydı başarılı";
+        //var body = "Kayıt oldunuz iyi günler.";
+
+        //var emailDto = EmailExtension.SendEmailDto(user.Email, subject, body);
+
+        //var smsDto = SmsExtension.SendSmsDto(user.PhoneNumber, subject, body);
+
+        //var emailResult = _emailParameterRepository.Send(emailDto, cancellationToken);
+
+        //var smsResult = _smsParameterRepository.Send(smsDto, cancellationToken);
 
         await _userManager.CreateAsync(user, request.Password);
 
